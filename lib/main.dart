@@ -16,6 +16,10 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  // We are using named routes to navigate between screens
+  // The initial route is set to '/home'
+  // The routes are defined in the routes property
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

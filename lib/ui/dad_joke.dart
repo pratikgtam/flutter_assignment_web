@@ -2,6 +2,11 @@ import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_web_assignment/ui/custom_scaffold.dart';
 
+// This is a stateful widget which will display a dad joke
+// It will fetch the joke from official-joke-api.appspot.com
+// It will display the setup of the joke
+// It will display a button to reveal the punchline
+
 class DadJoke extends StatefulWidget {
   const DadJoke({super.key});
 
@@ -19,6 +24,7 @@ class _DadJokeState extends State<DadJoke> {
     super.initState();
   }
 
+// Dio is used to fetch the dad joke from official-joke-api.appspot.com
   void _fetch() {
     Dio()
         .get('https://official-joke-api.appspot.com/jokes/random')

@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:qr_bar_code/qr/src/qr_code.dart';
 
+// This is a stateful widget which will generate a QR code
+// It will display a text field to enter the text to generate the QR code
+// It will display a button to generate the QR code
+// It will display the QR code
+
 class QrGenerator extends StatefulWidget {
   const QrGenerator({super.key});
 
@@ -9,6 +14,7 @@ class QrGenerator extends StatefulWidget {
 }
 
 class _QrGeneratorState extends State<QrGenerator> {
+  // This controller is used to get the text from the text field
   final TextEditingController _controller = TextEditingController();
   @override
   Widget build(BuildContext context) {
@@ -32,6 +38,7 @@ class _QrGeneratorState extends State<QrGenerator> {
               child: const Text('Generate QR code'),
             ),
             const SizedBox(height: 20),
+            // If the text field is not empty, display the QR code
             if (_controller.text.isNotEmpty)
               SizedBox(
                   height: 200,

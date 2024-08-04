@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_web_assignment/ui/custom_scaffold.dart';
 
+// This is the home screen of the app
+// It will display a welcome message
+// It will display 3 buttons to navigate to the QR Code Generator, Cat Gallery and Dad Joke screens
+
 class Home extends StatefulWidget {
   const Home({super.key});
 
@@ -48,6 +52,7 @@ class _HomeState extends State<Home> {
   }
 }
 
+// This is a custom container widget which will display a container with a text in the center
 class CustomContainer extends StatelessWidget {
   const CustomContainer({
     super.key,
