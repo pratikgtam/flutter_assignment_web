@@ -19,15 +19,17 @@ class _HomeState extends State<Home> {
           style: Theme.of(context).textTheme.titleLarge,
         ),
         const SizedBox(height: 50),
-        const Wrap(
+        Wrap(
             spacing: 20,
             runSpacing: 20,
             alignment: WrapAlignment.center,
             children: [
-              CustomContainer(),
-              CustomContainer(),
-              CustomContainer(),
-              CustomContainer(),
+              CustomContainer(
+                text: 'QR Code Generator',
+                onPressed: () {
+                  Navigator.pushNamed(context, '/qr');
+                },
+              ),
             ])
       ],
     ));
@@ -37,34 +39,41 @@ class _HomeState extends State<Home> {
 class CustomContainer extends StatelessWidget {
   const CustomContainer({
     super.key,
+    this.onPressed,
+    required this.text,
   });
+  final void Function()? onPressed;
+  final String text;
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 200,
-      height: 200,
-      decoration: const BoxDecoration(
-        color: Colors.blue,
-        border: Border(
-          top: BorderSide(width: 1.0, color: Colors.black),
-          left: BorderSide(width: 1.0, color: Colors.black),
-          right: BorderSide(width: 1.0, color: Colors.black),
-          bottom: BorderSide(width: 1.0, color: Colors.black),
-        ),
-        borderRadius: BorderRadius.all(Radius.circular(10)),
-      ),
-      child: const Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Text(
-            'QR Code Generator',
-            style: TextStyle(
-              fontSize: 20,
-              color: Colors.white,
-            ),
+    return InkWell(
+      onTap: onPressed,
+      child: Container(
+        width: 200,
+        height: 200,
+        decoration: const BoxDecoration(
+          color: Colors.blue,
+          border: Border(
+            top: BorderSide(width: 1.0, color: Colors.black),
+            left: BorderSide(width: 1.0, color: Colors.black),
+            right: BorderSide(width: 1.0, color: Colors.black),
+            bottom: BorderSide(width: 1.0, color: Colors.black),
           ),
-        ],
+          borderRadius: BorderRadius.all(Radius.circular(10)),
+        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              text,
+              style: const TextStyle(
+                fontSize: 20,
+                color: Colors.white,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

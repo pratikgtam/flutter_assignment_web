@@ -24,13 +24,19 @@ class _QrGeneratorState extends State<QrGenerator> {
                 hintText: 'Enter text to generate QR code',
               ),
             ),
+            const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
                 setState(() {});
               },
               child: const Text('Generate QR code'),
             ),
-            QRCode(data: _controller.text),
+            const SizedBox(height: 20),
+            if (_controller.text.isNotEmpty)
+              SizedBox(
+                  height: 200,
+                  width: 200,
+                  child: QRCode(data: _controller.text)),
           ],
         ),
       )),
