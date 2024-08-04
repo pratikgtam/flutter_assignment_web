@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_web_assignment/custom_scaffold.dart';
+import 'package:flutter_application_web_assignment/ui/custom_scaffold.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});

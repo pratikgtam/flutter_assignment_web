@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_web_assignment/home.dart';
-import 'package:flutter_application_web_assignment/qr_generator.dart';
+import 'package:flutter_application_web_assignment/ui/home.dart';
+import 'package:flutter_application_web_assignment/ui/qr_generator.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,6 +21,7 @@ class _MyAppState extends State<MyApp> {
       routes: {
         '/home': (context) => const Home(),
         '/qr': (context) => const QrGenerator(),
+        '/cat-gallery': (context) => const QrGenerator(),
       },
     );
   }
