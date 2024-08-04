@@ -30,6 +30,18 @@ class _HomeState extends State<Home> {
                   Navigator.pushNamed(context, '/qr');
                 },
               ),
+              CustomContainer(
+                text: 'Cat Gallery',
+                onPressed: () {
+                  Navigator.pushNamed(context, '/cat-gallery');
+                },
+              ),
+              CustomContainer(
+                text: 'Dad Joke',
+                onPressed: () {
+                  Navigator.pushNamed(context, '/dad-joke');
+                },
+              ),
             ])
       ],
     ));

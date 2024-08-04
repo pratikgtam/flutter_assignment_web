@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_web_assignment/ui/cat_gallery.dart';
+import 'package:flutter_application_web_assignment/ui/dad_joke.dart';
 import 'package:flutter_application_web_assignment/ui/home.dart';
 import 'package:flutter_application_web_assignment/ui/qr_generator.dart';
 
@@ -21,7 +23,8 @@ class _MyAppState extends State<MyApp> {
       routes: {
         '/home': (context) => const Home(),
         '/qr': (context) => const QrGenerator(),
-        '/cat-gallery': (context) => const QrGenerator(),
+        '/cat-gallery': (context) => const CatGallery(),
+        '/dad-joke': (context) => const DadJoke(),
       },
     );
   }
