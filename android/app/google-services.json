@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "180007109812",
+    "project_id": "pratikgtam-portfolio",
+    "storage_bucket": "pratikgtam-portfolio.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:180007109812:android:7e69a1e024276c40e8c3e1",
+        "android_client_info": {
+          "package_name": "com.example.pratik_portfolio"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB0DGJFjwMpk_H-fW3SngxyiDnIgAZG6OI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
